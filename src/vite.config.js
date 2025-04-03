@@ -10,4 +10,14 @@ export default defineConfig({
             refresh: true,
         }),
     ],
+    server: {
+        host: '0.0.0.0', // Важно для Docker!
+        hmr: {
+            host: 'localhost', // Или ваш домен
+            protocol: 'ws',
+        },
+        watch: {
+            usePolling: true, // Необходимо для Docker на Windows/WSL2
+        },
+    },
 });

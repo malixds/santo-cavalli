@@ -5,3 +5,16 @@
     font-weight: 400;
     font-style: normal;
 }
+
+.brand__name {
+    font-size: 5rem;
+}
+
+.main {
+    background-image: url("/images/background.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+
