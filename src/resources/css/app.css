@@ -6,15 +6,29 @@
     font-style: normal;
 }
 
-.brand__name {
-    font-size: 5rem;
-}
 
 .main {
-    background-image: url("/images/background.png");
+    position: relative;
+    background-image: url('../images/background.png');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
 }
 
+.main::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8); /* Затемнение 50% */
+    z-index: 1;
+}
 
+.brand__name {
+    font-size: 5rem;
+    position: relative;
+    color: white;
+    z-index: 2; /* Текст поверх затемнения */
+}

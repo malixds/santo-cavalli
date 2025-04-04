@@ -2,6 +2,7 @@ import {defineConfig} from 'vite';
 import laravel from 'laravel-vite-plugin';
 import tailwindcss from '@tailwindcss/vite';
 
+
 export default defineConfig({
     plugins: [
         tailwindcss(),
@@ -11,13 +12,10 @@ export default defineConfig({
         }),
     ],
     server: {
-        host: '0.0.0.0', // Важно для Docker!
+        host: 'localhost',
         hmr: {
-            host: 'localhost', // Или ваш домен
-            protocol: 'ws',
-        },
-        watch: {
-            usePolling: true, // Необходимо для Docker на Windows/WSL2
-        },
-    },
+            host: 'localhost',
+            protocol: 'ws'
+        }
+    }
 });
