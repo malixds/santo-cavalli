@@ -80,9 +80,9 @@ services:
     volumes:
       - ./src:/var/www/html
     ports:
-      - "5173:5173" # Порт Vite
-      - "24678:24678" # Порт HMR
+      - "3000:3000"
     working_dir: /var/www/html
+    entrypoint: ["npm"]
     networks:
       - laravel
 
