@@ -75,7 +75,7 @@
                 <!-- Копирайт и ссылки -->
                 <div class="text-center md:text-left">
                     <p class="text-sm text-gray-500 libre-baskerville-regular">
-                        &copy; 2023 Santo Cavalli. Все права защищены.
+                        &copy; 2025 Santo Cavalli. Все права защищены.
                     </p>
                     <div class="flex justify-center md:justify-start space-x-4 mt-2">
                         <a href="#" class="text-xs text-gray-500 hover:text-white transition">Политика конфиденциальности</a>
