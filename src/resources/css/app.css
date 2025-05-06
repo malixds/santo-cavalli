@@ -40,6 +40,7 @@
     background-attachment: fixed;
 }
 
+
 .main::before {
     content: '';
     position: absolute;
@@ -67,9 +68,8 @@
 .products__title {
     font-family: "Cormorant", serif;
     font-weight: 700;
-    font-size: 2.3rem ;
+    font-size: 2.3rem;
 }
-
 
 
 @media (max-width: 640px) {

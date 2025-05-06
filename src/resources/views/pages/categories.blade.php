@@ -2,11 +2,29 @@
 
 @section('content')
     <!-- Hero секция -->
-    <section class="relative h-96 flex items-center justify-center bg-gray-50 mb-16">
-        <div class="absolute inset-0 bg-black/30"></div>
-        <div class="relative z-10 text-center px-4">
-            <h1 class="text-4xl md:text-5xl font-light text-white mb-6 parisienne-regular">Все категории</h1>
-            <p class="text-lg text-gray-200 max-w-2xl mx-auto">Откройте для себя полную коллекцию Santo Cavalli</p>
+    <section class="relative h-screen min-h-[600px] flex items-center mb-16 overflow-hidden">
+        <!-- Фоновое изображение -->
+        <img
+            src="https://plantacv4hrdpi7j.storage.yandexcloud.net/iblock/b39/b3926f2a688854cf275cdd52018b0e0c/4fa4fb5314622ee254485c47d90158aa.jpg"
+            alt="Фон"
+            class="absolute inset-0 w-full h-full object-cover z-0"
+        >
+
+        <!-- Затемнение фона -->
+        <div class="absolute inset-0 bg-black/30 z-1"></div>
+
+        <!-- Текст поверх изображения -->
+        <div class="relative z-10 px-8 md:px-12 lg:px-24 xl:px-32 w-full max-w-4xl">
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-light text-white mb-6 parisienne-regular leading-tight">
+                Откройте для себя<br>наши последние поступления
+            </h1>
+            <div class="border-t border-white/30 w-24 my-6"></div>
+            <p class="text-xl md:text-2xl text-gray-100 libre-baskerville-regular max-w-2xl">
+                Santo Cavalli в России
+            </p>
+            <a href="#categories" class="mt-8 inline-block border border-white px-8 py-3 text-sm tracking-wider text-white hover:bg-white hover:text-gray-900 transition duration-300 libre-baskerville-regular">
+                Смотреть коллекцию
+            </a>
         </div>
     </section>
 
