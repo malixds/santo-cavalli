@@ -5,8 +5,10 @@
         </a>
 
 
-        <div id="brand-in-navbar" class="absolute left-1/2 transform -translate-x-1/2 opacity-0 transition-opacity duration-500">
-            <span class="text-xl md:text-2xl font-semibold parisienne__regular text-white">Santo Cavalli</span>
+        <div id="brand-in-navbar"
+             class="absolute left-1/2 transform -translate-x-1/2 opacity-0 transition-opacity duration-500">
+            <a href="/" class="text-xl md:text-2xl font-semibold parisienne__regular text-white pointer">Santo
+                Cavalli</a>
         </div>
 
         <!-- Burger button -->

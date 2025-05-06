@@ -3,10 +3,36 @@
 @section('content')
     {{--    Тут фото и надпись--}}
 
-    <section class="main flex items-center justify-center h-screen mb-10">
+    <section class="main flex items-center justify-center h-screen">
         <h1 id="main-brand" class="italic brand__name parisienne__regular text-4xl sm:text-2xl xs:text-xl">
             Santo Cavalli
         </h1>
+    </section>
+
+    <section class="relative h-screen min-h-[600px] flex items-center mb-16 overflow-hidden">
+        <!-- Фоновое изображение -->
+        <img
+            src="https://plantacv4hrdpi7j.storage.yandexcloud.net/iblock/b39/b3926f2a688854cf275cdd52018b0e0c/4fa4fb5314622ee254485c47d90158aa.jpg"
+            alt="Фон"
+            class="absolute inset-0 w-full h-full object-cover z-0"
+        >
+
+        <!-- Затемнение фона -->
+        <div class="absolute inset-0 bg-black/30 z-1"></div>
+
+        <!-- Текст поверх изображения -->
+        <div class="relative z-10 px-8 md:px-12 lg:px-24 xl:px-32 w-full max-w-4xl">
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-light text-white mb-6 parisienne-regular leading-tight">
+                Откройте для себя<br>наши последние поступления
+            </h1>
+            <div class="border-t border-white/30 w-24 my-6"></div>
+            <p class="text-xl md:text-2xl text-gray-100 libre-baskerville-regular max-w-2xl">
+                Santo Cavalli в России
+            </p>
+            <a href="{{route('collection.get')}}" class="mt-8 inline-block border border-white px-8 py-3 text-sm tracking-wider text-white hover:bg-white hover:text-gray-900 transition duration-300 libre-baskerville-regular">
+                Смотреть новую коллекцию
+            </a>
+        </div>
     </section>
 
     <section class="products py-16 bg-white">
@@ -132,6 +158,7 @@
             </div>
         </div>
     </section>
+
 
     <section class="new__collection py-16 bg-white">
 
