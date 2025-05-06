@@ -32,7 +32,8 @@
                             <h3 class="text-lg font-medium text-white libre-baskerville-regular">
                                 Футболки
                             </h3>
-                            <div class="bg-white/90 backdrop-blur-sm w-10 h-10 rounded-full flex items-center justify-center transform translate-x-2 group-hover:translate-x-0 transition-transform duration-300">
+                            <div
+                                class="bg-white/90 backdrop-blur-sm w-10 h-10 rounded-full flex items-center justify-center transform translate-x-2 group-hover:translate-x-0 transition-transform duration-300">
                                 <svg xmlns="http://www.w3.org/2000/svg"
                                      class="h-5 w-5 text-gray-800 group-hover:text-black group-hover:scale-110 transition-all duration-300"
                                      fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -60,7 +61,8 @@
                             <h3 class="text-lg font-medium text-white libre-baskerville-regular">
                                 Футболки
                             </h3>
-                            <div class="bg-white/90 backdrop-blur-sm w-10 h-10 rounded-full flex items-center justify-center transform translate-x-2 group-hover:translate-x-0 transition-transform duration-300">
+                            <div
+                                class="bg-white/90 backdrop-blur-sm w-10 h-10 rounded-full flex items-center justify-center transform translate-x-2 group-hover:translate-x-0 transition-transform duration-300">
                                 <svg xmlns="http://www.w3.org/2000/svg"
                                      class="h-5 w-5 text-gray-800 group-hover:text-black group-hover:scale-110 transition-all duration-300"
                                      fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -87,7 +89,8 @@
                             <h3 class="text-lg font-medium text-white libre-baskerville-regular">
                                 Футболки
                             </h3>
-                            <div class="bg-white/90 backdrop-blur-sm w-10 h-10 rounded-full flex items-center justify-center transform translate-x-2 group-hover:translate-x-0 transition-transform duration-300">
+                            <div
+                                class="bg-white/90 backdrop-blur-sm w-10 h-10 rounded-full flex items-center justify-center transform translate-x-2 group-hover:translate-x-0 transition-transform duration-300">
                                 <svg xmlns="http://www.w3.org/2000/svg"
                                      class="h-5 w-5 text-gray-800 group-hover:text-black group-hover:scale-110 transition-all duration-300"
                                      fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -114,7 +117,8 @@
                             <h3 class="text-lg font-medium text-white libre-baskerville-regular">
                                 Футболки
                             </h3>
-                            <div class="bg-white/90 backdrop-blur-sm w-10 h-10 rounded-full flex items-center justify-center transform translate-x-2 group-hover:translate-x-0 transition-transform duration-300">
+                            <div
+                                class="bg-white/90 backdrop-blur-sm w-10 h-10 rounded-full flex items-center justify-center transform translate-x-2 group-hover:translate-x-0 transition-transform duration-300">
                                 <svg xmlns="http://www.w3.org/2000/svg"
                                      class="h-5 w-5 text-gray-800 group-hover:text-black group-hover:scale-110 transition-all duration-300"
                                      fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -131,11 +135,15 @@
 
             <!-- Кнопка "Смотреть все" -->
             <div class="text-center mt-12">
-                <a href="/products"
+                <a href="{{route('category.get')}}"
                    class="inline-block border border-gray-800 px-8 py-3 text-sm tracking-wider text-gray-800 hover:bg-gray-800 hover:text-white transition duration-300 libre-baskerville-regular">
                     Смотреть все категории
                 </a>
             </div>
         </div>
+    </section>
+
+    <section class="new__collection py-16 bg-white">
+
     </section>
 @endsection
