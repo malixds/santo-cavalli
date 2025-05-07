@@ -25,44 +25,59 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
+
 <script>
     gsap.registerPlugin(ScrollTrigger);
+
+    // Проверяем, находимся ли мы на главной странице
+    const isHomePage = window.location.pathname === '/';
 
     const mainBrand = document.getElementById('main-brand');
     const navBrand = document.getElementById('brand-in-navbar');
     const navbar = document.querySelector('nav');
 
-    gsap.to(mainBrand, {
-        scrollTrigger: {
-            trigger: mainBrand,
-            start: "top-= 10top", // означает: когда верх элемента на 100px ниже верхушки окна
-            end: "top+=100 top",
-            scrub: true,
-            onEnter: () => navBrand.classList.add('opacity-100'),
-            onLeaveBack: () => navBrand.classList.remove('opacity-100'),
-        },
-        y: -100,
-        scale: 0.5,
-        opacity: 0,
-        ease: "power2.out",
-        duration: 1,
-    });
-    gsap.to(navbar, {
-        scrollTrigger: {
-            trigger: mainBrand,
-            start: "top-= 10top", // означает: когда верх элемента на 100px ниже верхушки окна
-            end: "top+=100 top",
-            scrub: true,
-        },
-        backgroundColor: "#000000", // чёрный цвет
-        ease: "none",
-        duration: 1,
-    });
+    // Для не-главных страниц сразу устанавливаем финальное состояние
+    if (!isHomePage) {
+        navBrand?.classList.add('opacity-100');
+        navbar.style.backgroundColor = "#000000";
+    } else {
+        // Анимации только для главной страницы
+        if (mainBrand && navBrand && navbar) {
+            gsap.to(mainBrand, {
+                scrollTrigger: {
+                    trigger: mainBrand,
+                    start: "top-=10 top",
+                    end: "top+=100 top",
+                    scrub: true,
+                    onEnter: () => navBrand.classList.add('opacity-100'),
+                    onLeaveBack: () => navBrand.classList.remove('opacity-100'),
+                },
+                y: -100,
+                scale: 0.5,
+                opacity: 0,
+                ease: "power2.out",
+                duration: 1,
+            });
+
+            gsap.to(navbar, {
+                scrollTrigger: {
+                    trigger: mainBrand,
+                    start: "top-=10 top",
+                    end: "top+=100 top",
+                    scrub: true,
+                },
+                backgroundColor: "#000000",
+                ease: "none",
+                duration: 1,
+            });
+        }
+    }
+
     window.addEventListener('load', () => {
         ScrollTrigger.refresh();
     });
-
 </script>
+
 
 </body>
 </html>

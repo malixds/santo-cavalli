@@ -1,14 +1,12 @@
-<nav class="bg-transparent fixed top-0 left-0 w-full z-50 sm:px-15">
+<nav class="bg-transparent fixed top-0 left-0 w-full z-50 sm:px-15 @if(!request()->is('/')) bg-black @endif">
     <div class="max-w-screen-xl flex items-center justify-between mx-auto p-4">
         <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
-            <span class="cormorant-regular self-center font-semibold whitespace-nowrap dark:text-white">Call us</span>
+            <span class="cormorant-regular self-center font-semibold whitespace-nowrap dark:text-white">CALL US</span>
         </a>
 
-
         <div id="brand-in-navbar"
-             class="absolute left-1/2 transform -translate-x-1/2 opacity-0 transition-opacity duration-500">
-            <a href="/" class="text-xl md:text-2xl font-semibold parisienne__regular text-white pointer">Santo
-                Cavalli</a>
+             class="absolute left-1/2 transform -translate-x-1/2 @if(request()->is('/')) opacity-0 @else opacity-100 @endif transition-opacity duration-500">
+            <a href="/" class="text-xl md:text-2xl font-semibold parisienne__regular text-white pointer">Santo Cavalli</a>
         </div>
 
         <!-- Burger button -->
