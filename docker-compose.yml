@@ -26,9 +26,8 @@ services:
     container_name: postgres
     image: postgres
     environment:
-      POSTGRES_DATABASE: test
-      POSTGRES_USER: ${POSTGRES_USER:-test}
-      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-test}
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
       PGDATA: /data/postgres
     volumes:
       - postgres:/data/postgres
@@ -37,6 +36,7 @@ services:
     networks:
       - laravel
     restart: unless-stopped
+
 
   php:
     build:

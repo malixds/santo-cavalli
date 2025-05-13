@@ -5,17 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e3e68ba7-f66d-4783-9d90-416e93fcf08d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/material_theme_project_new.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/material_theme_project_new.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/css/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/views/components/navbar.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/views/includes/footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/includes/footer.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/views/includes/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/includes/header.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/views/layouts/default.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/layouts/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/views/pages/main.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/pages/main.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/views/welcome.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/up.sh" beforeDir="false" afterPath="$PROJECT_DIR$/up.sh" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -285,6 +277,7 @@
       <recent name="$PROJECT_DIR$" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/public/images" />
       <recent name="$PROJECT_DIR$/src/resources" />
       <recent name="$PROJECT_DIR$/src/public" />
     </key>
@@ -313,7 +306,8 @@
       <updated>1743062050038</updated>
       <workItem from="1743062051426" duration="2601000" />
       <workItem from="1743708968209" duration="9368000" />
-      <workItem from="1743875372957" duration="7040000" />
+      <workItem from="1743875372957" duration="10785000" />
+      <workItem from="1746031676537" duration="45291000" />
     </task>
     <servers />
   </component>
