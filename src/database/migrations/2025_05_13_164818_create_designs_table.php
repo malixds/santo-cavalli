@@ -13,9 +13,9 @@ return new class extends Migration {
         Schema::create('designs', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id')->references('id')->on('users')->cascadeOnDelete();
+            $table->foreignId('category_id')->references('id')->on('categories')->cascadeOnDelete();
             $table->text('description')->nullable();
             $table->text('public_url');
-            $table->foreignId('category_id')->references('id')->on('categories')->cascadeOnDelete();
             $table->timestamps();
         });
     }
