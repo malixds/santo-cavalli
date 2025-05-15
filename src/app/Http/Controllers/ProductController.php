@@ -15,9 +15,10 @@ class ProductController extends Controller
 
     public function getProductsByCategory(string $category)
     {
-        $products = Category::query()
-            ->where('name', $category)
-            ->with('products')
+        $category = Category::query()->where('name', $category)->first();
+        $products = Product::query()
+            ->where('category_id', $category->id)
+            ->with('category')
             ->get();
 
 
