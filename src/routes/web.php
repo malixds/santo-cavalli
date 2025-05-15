@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
 use \App\Http\Controllers\MainController;
 use \App\Http\Controllers\CategoryController;
@@ -14,7 +15,11 @@ Route::get('/', function () {
 Route::get('/', [MainController::class, 'main'])->name('main.get');
 
 Route::prefix('categories')->group(function () {
-    Route::get('/', [CategoryController::class, 'getAllCategories'])->name('category.get');;
+    Route::get('/{category}', [ProductController::class, 'getProductsByCategory'])->name('category.get-all-products');
+    Route::prefix('products')->group(function () {
+        Route::get('/{category}/{uuid}', [ProductController::class, 'getOneProduct'])->name('category.get-one-product');
+    });
+    Route::get('/', [CategoryController::class, 'getAllCategories'])->name('category.get');
 });
 
 Route::prefix('collections')->group(function () {
@@ -23,5 +28,9 @@ Route::prefix('collections')->group(function () {
 
 Route::prefix('designs')->group(function () {
     Route::get('/', [DesignController::class, 'getPage'])->name('design.page-get');
-    Route::post('/', [DesignController::class, 'storeDesign'])->name('designs.store');
+    Route::post('/store', [DesignController::class, 'storeDesign'])->name('designs.store');
 });
+
+
+
+

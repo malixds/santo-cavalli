@@ -9,8 +9,12 @@ class CategoryController extends Controller
 {
     public function getAllCategories()
     {
-//        $categories = Category::all(); // Получаем категории
+        $categories = Category::query()
+            ->withCount('products')
+            ->get();
 
-        return view('pages.categories');
+        return view('pages.categories', [
+            'categories' => $categories,
+        ]);
     }
 }
