@@ -10,9 +10,10 @@ return new class extends Migration {
      */
     public function up(): void
     {
-        Schema::create('media', function (Blueprint $table) {
+        Schema::create('product_images', function (Blueprint $table) {
             $table->id();
-            $table->text('public_url');
+            $table->foreignId('product_id')->references('id')->on('products')->cascadeOnDelete();
+            $table->jsonb('urls');
             $table->timestamps();
         });
     }

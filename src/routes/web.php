@@ -17,7 +17,7 @@ Route::get('/', [MainController::class, 'main'])->name('main.get');
 Route::prefix('categories')->group(function () {
     Route::get('/{category}', [ProductController::class, 'getProductsByCategory'])->name('category.get-all-products');
     Route::prefix('products')->group(function () {
-        Route::get('/{category}/{uuid}', [ProductController::class, 'getOneProduct'])->name('category.get-one-product');
+        Route::get('{uuid}', [ProductController::class, 'getOneProduct'])->name('product.get-one');
     });
     Route::get('/', [CategoryController::class, 'getAllCategories'])->name('category.get');
 });

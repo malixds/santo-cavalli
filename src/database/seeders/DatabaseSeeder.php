@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\Product;
+use App\Models\ProductImage;
 use App\Models\User;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
@@ -25,5 +26,6 @@ class DatabaseSeeder extends Seeder
         (new CategorySeeder())->run();
         (new ProductSeeder())->run();
         (new UserSeeder())->run();
+        (new ProductImageSeeder())->run();
     }
 }
