@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AuthorizationController;
 use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
 use \App\Http\Controllers\MainController;
@@ -29,6 +30,10 @@ Route::prefix('collections')->group(function () {
 Route::prefix('designs')->group(function () {
     Route::get('/', [DesignController::class, 'getPage'])->name('design.page-get');
     Route::post('/store', [DesignController::class, 'storeDesign'])->name('designs.store');
+});
+
+Route::prefix('authorization')->group(function () {
+    Route::post('/', [AuthorizationController::class, 'authorization'])->name('authorization');
 });
 
 

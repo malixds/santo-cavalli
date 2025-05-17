@@ -91,22 +91,22 @@
                 </div>
 
                 <!-- Дополнительная информация -->
-                <div class="mt-8 pt-6 border-t border-gray-200">
-                    <div class="space-y-3">
-                        <div class="flex items-start">
-                            <svg class="h-5 w-5 text-gray-500 mt-0.5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                            </svg>
-                            <span>Бесплатная доставка от 5 000 ₽</span>
-                        </div>
-                        <div class="flex items-start">
-                            <svg class="h-5 w-5 text-gray-500 mt-0.5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                            </svg>
-                            <span>Возврат в течение 14 дней</span>
-                        </div>
-                    </div>
-                </div>
+{{--                <div class="mt-8 pt-6 border-t border-gray-200">--}}
+{{--                    <div class="space-y-3">--}}
+{{--                        <div class="flex items-start">--}}
+{{--                            <svg class="h-5 w-5 text-gray-500 mt-0.5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">--}}
+{{--                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>--}}
+{{--                            </svg>--}}
+{{--                            <span>Бесплатная доставка от 5 000 ₽</span>--}}
+{{--                        </div>--}}
+{{--                        <div class="flex items-start">--}}
+{{--                            <svg class="h-5 w-5 text-gray-500 mt-0.5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">--}}
+{{--                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>--}}
+{{--                            </svg>--}}
+{{--                            <span>Возврат в течение 14 дней</span>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
             </div>
         </div>
     </section>
