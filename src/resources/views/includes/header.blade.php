@@ -1,4 +1,5 @@
-<nav class="bg-transparent fixed top-0 left-0 w-full z-50 sm:px-15 @if(!request()->is('/')) bg-black @endif">
+<nav class="bg-transparent fixed top-0 left-0 w-full z-50 sm:px-15 @if(!request()->is('/')) bg-black @endif"
+     xmlns="http://www.w3.org/1999/html">
     <div class="max-w-screen-xl flex items-center justify-between mx-auto p-4">
         <div class="tools flex">
             <!-- Кнопка в шапке сайта -->
@@ -34,7 +35,8 @@
                                 </button>
                             </div>
 
-                            <form class="mt-6 space-y-6" action="{{ route('authorization') }}" method="POST">
+                            <form id="auth-form" class="mt-6 space-y-6" action="{{ route('authorization') }}"
+                                  method="POST">
                                 @csrf
                                 <div>
                                     <label for="email" class="block text-sm font-medium text-gray-700">Телефон</label>
@@ -94,6 +96,44 @@
                         if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
                             modal.classList.add('hidden');
                             document.body.style.overflow = 'auto';
+                        }
+                    });
+                });
+            </script>
+
+            <script>
+                document.addEventListener('DOMContentLoaded', function () {
+
+                    console.log('auth');
+                    const form = document.getElementById('auth-form');
+
+                    form.addEventListener('submit', async function (e) {
+                        e.preventDefault(); // отмена стандартной отправки
+
+                        const formData = new FormData(form);
+                        const csrfToken = document.querySelector('input[name="_token"]').value;
+
+                        try {
+                            const response = await fetch(form.action, {
+                                method: 'POST',
+                                headers: {
+                                    'X-CSRF-TOKEN': csrfToken,
+                                    'Accept': 'application/json',
+                                },
+                                body: formData
+                            });
+
+                            if (response.ok) {
+                                const data = await response.json();
+                                console.log('Успешно отправлено:', data);
+                                // Здесь можно, например, показать сообщение об успехе
+                            } else {
+                                const error = await response.json();
+                                console.error('Ошибка:', error);
+                                // Можно отобразить ошибки на форме
+                            }
+                        } catch (err) {
+                            console.error('Ошибка при запросе:', err);
                         }
                     });
                 });

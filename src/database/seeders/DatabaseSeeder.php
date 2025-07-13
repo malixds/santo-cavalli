@@ -24,6 +24,7 @@ class DatabaseSeeder extends Seeder
 //        ]);
 
         (new CategorySeeder())->run();
+        (new CollectionSeeder())->run();
         (new ProductSeeder())->run();
         (new UserSeeder())->run();
         (new ProductImageSeeder())->run();

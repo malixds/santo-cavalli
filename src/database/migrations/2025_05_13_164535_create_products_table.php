@@ -13,6 +13,10 @@ return new class extends Migration {
             $table->id();
             $table->uuid();
             $table->foreignId('category_id')->references('id')->on('categories')->cascadeOnDelete();
+            $table->foreignId('collection_id')
+                ->nullable()
+                ->references('id')->on('collections')
+                ->cascadeOnDelete();
             $table->string('name');
             $table->text('description')->nullable();
             $table->jsonb('information');

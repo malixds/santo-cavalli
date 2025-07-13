@@ -28,5 +28,19 @@ class ProductSeeder extends Seeder
                 ]);
             }
         }
+
+        foreach ($categoryIds as $categoryId) {
+            for ($j = 0; $j <= self::NUMBER_OF_PRODUCTS; $j++) {
+                Product::create([
+                    'uuid'          => Str::uuid(),
+                    'collection_id' => 1,
+                    'category_id'   => $categoryId,
+                    'price'         => $faker->numberBetween(1000, 10000),
+                    'description'   => 'Хороший продукт',
+                    'information'   => ['description' => 'Хороший товар', 'structure' => ['Хлопок' => 20, 'Полиэстер' => 80]],
+                    'name'          => $faker->words(3, true),
+                ]);
+            }
+        }
     }
 }
