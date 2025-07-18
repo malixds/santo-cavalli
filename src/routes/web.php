@@ -24,7 +24,8 @@ Route::prefix('categories')->group(function () {
 });
 
 Route::prefix('collections')->group(function () {
-    Route::get('/', [CollectionController::class, 'getLastCollection'])->name('collection.get');;
+    Route::get('/{id?}', [CollectionController::class, 'getCollection'])->name('collection.get');;
+    Route::get('/', [CollectionController::class, 'getAllCollections'])->name('collection.get-all');;
 });
 
 Route::prefix('designs')->group(function () {

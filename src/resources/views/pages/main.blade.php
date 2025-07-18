@@ -12,7 +12,7 @@
     <section class="relative h-screen min-h-[600px] flex items-center overflow-hidden">
         <!-- Фоновое изображение -->
         <img
-            src="https://plantacv4hrdpi7j.storage.yandexcloud.net/iblock/5dd/5dda77e7ae0d5f1d7df7699c459b5268/898353acf71c512be31cdee89f47cbd1.jpg"
+            src="https://plantacv4hrdpi7j.storage.yandexcloud.net/iblock/ed3/ed382b9dc7129f554342ccfa0a527f54/9a328bbe426ef0647f0f45e0c57f05f1.jpg"
             alt="Фон"
             class="absolute inset-0 w-full h-full object-cover z-0"
         >
@@ -40,7 +40,7 @@
     <section class="self__design relative h-screen min-h-[600px] flex items-center mb-16 overflow-hidden">
         <!-- Фоновое изображение -->
         <img
-            src="https://plantacv4hrdpi7j.storage.yandexcloud.net/iblock/5dd/5dda77e7ae0d5f1d7df7699c459b5268/898353acf71c512be31cdee89f47cbd1.jpg"
+            src="https://plantacv4hrdpi7j.storage.yandexcloud.net/iblock/318/318c65d787d842f77027f532f7f7ddf7/66a9e0fefc18172cf1ca71d0909cfbae.jpg"
             alt="Фон"
             class="absolute inset-0 w-full h-full object-cover z-0"
         >
@@ -78,7 +78,7 @@
                     class="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-xl transition-all duration-500">
                     <div class="aspect-[4/5] bg-gray-100 relative">
                         <img
-                            src="https://plantacv4hrdpi7j.storage.yandexcloud.net/iblock/5dd/5dda77e7ae0d5f1d7df7699c459b5268/898353acf71c512be31cdee89f47cbd1.jpg"
+                            src="https://plantacv4hrdpi7j.storage.yandexcloud.net/iblock/318/318c65d787d842f77027f532f7f7ddf7/66a9e0fefc18172cf1ca71d0909cfbae.jpg"
                             alt="Футболки"
                             class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                         >
@@ -104,7 +104,7 @@
                     class="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-xl transition-all duration-500">
                     <div class="aspect-[4/5] bg-gray-100 relative">
                         <img
-                            src="https://plantacv4hrdpi7j.storage.yandexcloud.net/iblock/5dd/5dda77e7ae0d5f1d7df7699c459b5268/898353acf71c512be31cdee89f47cbd1.jpg"
+                            src="https://plantacv4hrdpi7j.storage.yandexcloud.net/iblock/318/318c65d787d842f77027f532f7f7ddf7/66a9e0fefc18172cf1ca71d0909cfbae.jpg"
                             alt="Футболки"
                             class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                         >
@@ -129,7 +129,7 @@
                     class="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-xl transition-all duration-500">
                     <div class="aspect-[4/5] bg-gray-100 relative">
                         <img
-                            src="https://plantacv4hrdpi7j.storage.yandexcloud.net/iblock/5dd/5dda77e7ae0d5f1d7df7699c459b5268/898353acf71c512be31cdee89f47cbd1.jpg"
+                            src="https://plantacv4hrdpi7j.storage.yandexcloud.net/iblock/318/318c65d787d842f77027f532f7f7ddf7/66a9e0fefc18172cf1ca71d0909cfbae.jpg"
                             alt="Футболки"
                             class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                         >
@@ -155,7 +155,7 @@
                     class="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-xl transition-all duration-500">
                     <div class="aspect-[4/5] bg-gray-100 relative">
                         <img
-                            src="https://plantacv4hrdpi7j.storage.yandexcloud.net/iblock/5dd/5dda77e7ae0d5f1d7df7699c459b5268/898353acf71c512be31cdee89f47cbd1.jpg"
+                            src="https://plantacv4hrdpi7j.storage.yandexcloud.net/iblock/318/318c65d787d842f77027f532f7f7ddf7/66a9e0fefc18172cf1ca71d0909cfbae.jpg"
                             alt="Футболки"
                             class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                         >
