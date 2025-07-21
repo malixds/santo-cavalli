@@ -18,7 +18,7 @@ class CollectionController extends Controller
         $collections = $this->repository->getAll();
 
         return view('pages.collections.all_collection', [
-            'collection' => $collections,
+            'collections' => $collections,
         ]);
     }
 

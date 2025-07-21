@@ -16,16 +16,16 @@ Route::get('/', function () {
 Route::get('/', [MainController::class, 'main'])->name('main.get');
 
 Route::prefix('categories')->group(function () {
-    Route::get('/{category}', [ProductController::class, 'getProductsByCategory'])->name('category.get-all-products');
-    Route::prefix('products')->group(function () {
-        Route::get('{uuid}', [ProductController::class, 'getOneProduct'])->name('product.get-one');
-    });
     Route::get('/', [CategoryController::class, 'getAllCategories'])->name('category.get');
+});
+Route::prefix('products')->group(function () {
+    Route::get('/search', [ProductController::class, 'search'])->name('products.search');
+    Route::get('{uuid}', [ProductController::class, 'getOneProduct'])->name('product.get-one');
 });
 
 Route::prefix('collections')->group(function () {
+    Route::get('/all', [CollectionController::class, 'getAllCollections'])->name('collection.get-all');;
     Route::get('/{id?}', [CollectionController::class, 'getCollection'])->name('collection.get');;
-    Route::get('/', [CollectionController::class, 'getAllCollections'])->name('collection.get-all');;
 });
 
 Route::prefix('designs')->group(function () {

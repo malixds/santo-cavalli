@@ -5,17 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e3e68ba7-f66d-4783-9d90-416e93fcf08d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/app/Interfaces/CollectionInterfaces/ICollectionRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/Repository/CollectionRepositories/CollectionRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/views/pages/collections/new_collection.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/Http/Controllers/CollectionController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Http/Controllers/CollectionController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/Models/Collection.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Models/Collection.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/Providers/AppServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Providers/AppServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/views/pages/main.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/pages/main.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/views/pages/newcollection.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/pages/collections/all_collection.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/Http/Controllers/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Http/Controllers/ProductController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/database/migrations/2025_04_04_125446_create_collections_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/migrations/2025_04_04_125446_create_collections_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/database/seeders/CollectionSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/seeders/CollectionSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/views/pages/categories.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/pages/categories.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/views/pages/collections/all_collection.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/pages/collections/all_collection.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/views/pages/collections/new_collection.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/pages/collections/new_collection.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/views/pages/products/products.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/pages/products/products.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/web.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/up.sh" beforeDir="false" afterPath="$PROJECT_DIR$/up.sh" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -276,6 +281,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "PHPUnit.Main.executor": "Debug",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
     "last_opened_file_path": "/Users/malixds/dev/pepper_crew/src/resources/views/pages/products",
@@ -336,7 +342,7 @@
       <workItem from="1751004220635" duration="599000" />
       <workItem from="1751057993589" duration="12000" />
       <workItem from="1751058031941" duration="4273000" />
-      <workItem from="1751969079731" duration="9018000" />
+      <workItem from="1751969079731" duration="27838000" />
     </task>
     <servers />
   </component>

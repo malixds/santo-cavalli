@@ -13,13 +13,26 @@ class ProductController extends Controller
     {
     }
 
-    public function getProductsByCategory(string $category)
+    public function search(Request $request)
     {
-        $category = Category::query()->where('name', $category)->first();
         $products = Product::query()
-            ->where('category_id', $category->id)
-            ->with(['category', 'images'])
-            ->get();
+            ->with(['category', 'images']);
+
+        foreach ($request->all() as $key => $value) {
+            if (str_contains($key, 'min') || str_contains($key, 'max')) {
+                if (str_contains($key, 'min')) {
+                    $products->where('price', '>=', $value);
+                } else {
+                    $products->where('price', '<=', $value);
+                }
+            } else if (is_array($value)) {
+                $products->whereIn($key, $value);
+            } else {
+                $products->where($key, $value);
+            }
+        }
+
+        $products = $products->get();
 
         return view('pages.products.products', [
             'products' => $products,

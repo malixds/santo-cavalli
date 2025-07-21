@@ -26,7 +26,8 @@
                             </a>
                         </div>
                     </div>
-                    <a href="{{route('category.get-all-products', $category->name)}}" class="absolute inset-0 z-10"
+                    <a href="{{route('products.search', ['category_id' => $category->id])}}"
+                       class="absolute inset-0 z-10"
                        aria-label="T-Shirts"></a>
                 </div>
         @endforeach

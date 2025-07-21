@@ -2,142 +2,66 @@
 
 @section('content')
     <!-- Сетка категорий -->
-    <section class="py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto mt-20">
-        <h2 class="text-2xl font-light text-center mb-12 libre-baskerville-regular">{{$collection->name}}</h2>
+    <section class="py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto mt-10">
+        <div class="relative w-full h-96 md:h-[32rem] lg:h-[40rem] mb-16 rounded-lg overflow-hidden shadow-lg">
+            <!-- Фоновое изображение -->
+            <img
+                src="https://plantacv4hrdpi7j.storage.yandexcloud.net/iblock/318/318c65d787d842f77027f532f7f7ddf7/66a9e0fefc18172cf1ca71d0909cfbae.jpg"
+                alt="{{ $collection->name }}"
+                class="absolute inset-0 w-full h-full object-cover z-0 transition-transform duration-500 hover:scale-105"
+            >
 
-        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            <!-- Затемнение для лучшей читаемости текста -->
+            <div class="absolute inset-0 bg-black bg-opacity-30 z-10"></div>
+
+            <!-- Контент коллекции -->
+            <div
+                class="relative z-20 h-full flex flex-col justify-center items-start p-8 md:p-12 lg:p-16 text-white">
+                <h3 class="text-2xl md:text-3xl lg:text-4xl font-medium mb-4">{{ $collection->name }}</h3>
+                <p class="text-lg md:text-xl lg:text-2xl max-w-2xl mb-6">{{ $collection->description }}</p>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-1">
             @foreach($collection->products as $product)
                 <!-- Product Card -->
-                <div
-                    class="group relative border border-gray-200 rounded-lg hover:shadow-md transition-all duration-300 overflow-hidden">
-                    <!-- Slider Container -->
-                    <div class="relative h-48 overflow-hidden">
-                        <!-- Slides -->
-                        <div class="flex h-full transition-transform duration-300 ease-in-out"
-                             id="slider-{{ $product->id }}">
-                            @foreach($product->images->urls['images'] as $url)
-                                <div class="w-full flex-shrink-0">
-                                    <img src="{{ asset($url) }}" alt="{{ $product->name }}"
-                                         class="w-full h-full object-cover">
-                                </div>
-                            @endforeach
-                        </div>
+                <a href="{{ route('product.get-one', $product->uuid) }}"
+                   class="block p-2 md:p-2"
+                   aria-label="{{ $product->name }}">
+                    <div
+                        class="product group relative hover:shadow-xl transition-all duration-300 overflow-hidden">
 
-                        <!-- Navigation Dots -->
-                        @if(count($product->images->urls['images']) > 1)
-                            <div class="absolute bottom-2 left-0 right-0 flex justify-center space-x-1">
-                                @foreach($product->images->urls['images'] as $index => $image)
-                                    <button
-                                        class="w-2 h-2 rounded-full bg-white opacity-50 hover:opacity-100 transition-opacity slider-dot"
-                                        data-slider="{{ $product->id }}"
-                                        data-slide="{{ $index }}"></button>
+                        <div class="swiper">
+                            <div class="swiper-wrapper">
+                                @foreach($product->images->urls['images'] as $url)
+                                    <div class="swiper-slide">
+                                        <img src="{{ asset($url) }}" alt="{{ $product->name }}"
+                                             class="w-full h-full object-cover"
+                                             loading="lazy">
+                                    </div>
                                 @endforeach
                             </div>
-                        @endif
-                    </div>
+                            <!-- Navigation buttons -->
+                            <div class="swiper-button-prev group-hover:block transition-opacity duration-200"></div>
+                            <div class="swiper-button-next group-hover:block transition-opacity duration-200"></div>
+                            <div class="swiper-scrollbar"></div>
+                        </div>
 
-                    <div class="p-6">
-                        <h3 class="text-center text-xl font-medium text-gray-900 mb-2 libre-baskerville-regular">{{ $product->name }}</h3>
+
+                        <h3 class="text-center text-lg mb-2">{{ $product->name }}</h3>
                         <div class="mt-2 text-center">
-                            <span class="text-lg font-semibold text-gray-900">{{ $product->price }} ₽</span>
-                        </div>
-                        <div class="mt-4 flex justify-end">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-gray-700" fill="none"
-                                 viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                            </svg>
+                            <span
+                                class="text-base md:text-lg font-semibold text-gray-900">{{ round($product->price) }}</span>
                         </div>
                     </div>
-                    <a href="{{ route('product.get-one', $product->uuid) }}" class="absolute inset-0 z-10"
-                       aria-label="{{ $product->name }}"></a>
-                </div>
+                </a>
             @endforeach
         </div>
-    </section>
-
-    <!-- CTA секция -->
-    <section class="py-16 bg-gray-50 mt-16">
-        <div class="max-w-4xl mx-auto text-center px-4">
-            <h2 class="text-3xl font-light text-gray-900 mb-6 parisienne-regular">Need custom envelopes?</h2>
-            <p class="text-gray-600 mb-8 max-w-2xl mx-auto">We can create bespoke envelopes tailored to your specific
-                requirements</p>
-            <a href="/contact"
+        <div class="max-w-4xl mx-auto text-center px-4 mt-10">
+            <a href="{{route('collection.get-all')}}"
                class="inline-block border border-gray-800 px-8 py-3 text-sm tracking-wider text-gray-800 hover:bg-gray-800 hover:text-white transition duration-300 libre-baskerville-regular">
-                Request Custom Order
+                Смотреть все коллекции
             </a>
         </div>
     </section>
-
-    @push('scripts')
-        <script>
-            document.addEventListener('DOMContentLoaded', function () {
-                // Initialize sliders for each product
-                @foreach($collection->products as $product)
-                @if(count($product->images->urls['images']) > 1)
-                initSlider({{ $product->id }}, {{ count($product->images->urls['images']) }});
-                @endif
-                @endforeach
-
-                // Handle dot navigation
-                document.querySelectorAll('.slider-dot').forEach(dot => {
-                    dot.addEventListener('click', function () {
-                        const sliderId = this.dataset.slider;
-                        const slideIndex = parseInt(this.dataset.slide);
-                        goToSlide(sliderId, slideIndex);
-                    });
-                });
-            });
-
-            function initSlider(sliderId, slideCount) {
-                let currentIndex = 0;
-                const slider = document.getElementById(`slider-${sliderId}`);
-                const dots = document.querySelectorAll(`.slider-dot[data-slider="${sliderId}"]`);
-
-                // Auto-rotate slides every 3 seconds
-                const interval = setInterval(() => {
-                    currentIndex = (currentIndex + 1) % slideCount;
-                    updateSlider(sliderId, currentIndex, slider, dots);
-                }, 3000);
-
-                // Pause on hover
-                slider.parentElement.addEventListener('mouseenter', () => clearInterval(interval));
-                slider.parentElement.addEventListener('mouseleave', () => {
-                    interval = setInterval(() => {
-                        currentIndex = (currentIndex + 1) % slideCount;
-                        updateSlider(sliderId, currentIndex, slider, dots);
-                    }, 3000);
-                });
-            }
-
-            function goToSlide(sliderId, slideIndex) {
-                const slider = document.getElementById(`slider-${sliderId}`);
-                const dots = document.querySelectorAll(`.slider-dot[data-slider="${sliderId}"]`);
-                updateSlider(sliderId, slideIndex, slider, dots);
-            }
-
-            function updateSlider(sliderId, index, slider, dots) {
-                slider.style.transform = `translateX(-${index * 100}%)`;
-
-                // Update dots
-                dots.forEach((dot, i) => {
-                    dot.classList.toggle('opacity-50', i !== index);
-                    dot.classList.toggle('opacity-100', i === index);
-                });
-            }
-        </script>
-    @endpush
-
-    <style>
-        .slider-dot {
-            transition: opacity 0.3s ease;
-        }
-
-        .slider-dot.opacity-100 {
-            opacity: 1;
-        }
-
-        .slider-dot.opacity-50 {
-            opacity: 0.5;
-        }
-    </style>
 @endsection

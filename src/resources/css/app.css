@@ -85,3 +85,35 @@
 .design__events-list {
     list-style:  none;
 }
+
+
+
+.swiper-button-prev,
+.swiper-button-next {
+    color: #6B7280; /* Tailwind gray-500 */
+    transition: background-color 0.3s, transform 0.3s;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+    z-index: 10;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* Увеличим hitbox */
+.swiper-button-prev,
+.swiper-button-next {
+    padding: 100px 9px; /* Чтобы вся высота карточки реагировала на клик */
+}
+
+.swiper-button-prev {
+    left: 0;
+}
+
+.swiper-button-next {
+    right: 0;
+}
