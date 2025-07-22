@@ -47,7 +47,7 @@ class Cart extends Model
         return $this->items()->where('id', $itemId)->delete();
     }
 
-    public function updateQuantity($itemId, $quantity)
+    public function updateQuantity($itemId, $quantity): int
     {
         if ($quantity <= 0) {
             return $this->removeItem($itemId);
@@ -61,7 +61,7 @@ class Cart extends Model
         return $this->items()->sum('quantity');
     }
 
-    public function mergeWithSessionCart($sessionCart)
+    public function mergeWithSessionCart($sessionCart): void
     {
         if ($sessionCart) {
             foreach ($sessionCart->items as $item) {

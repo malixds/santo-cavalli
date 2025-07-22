@@ -40,13 +40,15 @@ Route::prefix('authorization')->group(function () {
 });
 
 Route::prefix('cart')->group(function () {
-    Route::post('/add', [CartController::class, 'addItem'])->name('cart.add-item');
-    Route::get('/get', [CartController::class, 'getItemsInCart'])->name('cart.get-items');
+    Route::post('/add', [CartController::class, 'addItem'])->name('cart.add');
+    Route::put('/add', [CartController::class, 'updateItem'])->name('cart.add');
+    Route::delete('/add', [CartController::class, 'removeItem'])->name('cart.add');
+    Route::get('/get', [CartController::class, 'getCart'])->name('cart.get');
 });
 
 Route::prefix('wishlist')->group(function () {
-    Route::post('/add', [WishlistController::class, 'addItem'])->name('wishlist.add-item');
-    Route::get('/get', [WishlistController::class, 'getItemsInWishlist'])->name('wishlist.get-items');
+    Route::post('/add', [WishlistController::class, 'add'])->name('wishlist.add');
+    Route::get('/get', [WishlistController::class, 'getWishlist'])->name('wishlist.get');
 });
 
 
