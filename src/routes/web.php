@@ -1,7 +1,9 @@
 <?php
 
 use App\Http\Controllers\AuthorizationController;
+use App\Http\Controllers\CartController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\WishlistController;
 use Illuminate\Support\Facades\Route;
 use \App\Http\Controllers\MainController;
 use \App\Http\Controllers\CategoryController;
@@ -35,6 +37,16 @@ Route::prefix('designs')->group(function () {
 
 Route::prefix('authorization')->group(function () {
     Route::post('/', [AuthorizationController::class, 'authorization'])->name('authorization');
+});
+
+Route::prefix('cart')->group(function () {
+    Route::post('/add', [CartController::class, 'addItem'])->name('cart.add-item');
+    Route::get('/get', [CartController::class, 'getItemsInCart'])->name('cart.get-items');
+});
+
+Route::prefix('wishlist')->group(function () {
+    Route::post('/add', [WishlistController::class, 'addItem'])->name('wishlist.add-item');
+    Route::get('/get', [WishlistController::class, 'getItemsInWishlist'])->name('wishlist.get-items');
 });
 
 
