@@ -8,32 +8,34 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet">
     <link
-        href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Parisienne&display=swap"
-        rel="stylesheet">
+            href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Parisienne&display=swap"
+            rel="stylesheet">
     <link
-        href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Parisienne&display=swap"
-        rel="stylesheet">
+            href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Parisienne&display=swap"
+            rel="stylesheet">
     <link
-        rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body>
+
 @include('includes.header')
 
-@yield('content') <!-- Основной контент страниц -->
+@yield('content')
 
 @include('includes.footer')
+
+@stack('scripts')
+
+@stack('styles')
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
-
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-
+<script src="//unpkg.com/alpinejs" defer></script>
 <script>
     gsap.registerPlugin(ScrollTrigger);
 

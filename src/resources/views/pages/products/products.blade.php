@@ -105,6 +105,37 @@
     </section>
 
     <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.querySelectorAll('.swiper').forEach((el, index) => {
+                // Генерируем уникальные классы для кнопок и скроллбара
+                const prevBtn = el.querySelector('.swiper-button-prev');
+                const nextBtn = el.querySelector('.swiper-button-next');
+                const scrollbar = el.querySelector('.swiper-scrollbar');
+
+                // Добавляем уникальные классы
+                const uniqueId = 'swiper-' + index;
+                el.classList.add(uniqueId);
+
+                if (prevBtn) prevBtn.classList.add(`swiper-button-prev-${index}`);
+                if (nextBtn) nextBtn.classList.add(`swiper-button-next-${index}`);
+                if (scrollbar) scrollbar.classList.add(`swiper-scrollbar-${index}`);
+
+                // Инициализация слайдера
+                new Swiper('.' + uniqueId, {
+                    loop: true,
+                    navigation: {
+                        nextEl: `.swiper-button-next-${index}`,
+                        prevEl: `.swiper-button-prev-${index}`,
+                    },
+                    scrollbar: {
+                        el: `.swiper-scrollbar-${index}`,
+                        draggable: true,
+                    },
+                });
+            });
+        });
+
+
         document.querySelectorAll('.swiper-button-prev, .swiper-button-next').forEach(btn => {
             btn.addEventListener('click', (e) => {
                 e.stopPropagation();
