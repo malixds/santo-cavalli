@@ -36,7 +36,8 @@ Route::prefix('designs')->group(function () {
 });
 
 Route::prefix('authorization')->group(function () {
-    Route::post('/', [AuthorizationController::class, 'authorization'])->name('authorization');
+    Route::get('/sms/get', [AuthorizationController::class, 'getSmsCode'])->name('authorization.get-sms');
+    Route::post('/code/send', [AuthorizationController::class, 'sendCode'])->name('authorization.send-code');
 });
 
 Route::prefix('cart')->group(function () {
