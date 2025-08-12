@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Route;
 use \App\Http\Controllers\MainController;
 use \App\Http\Controllers\CategoryController;
 use \App\Http\Controllers\CollectionController;
-use \App\Http\Controllers\DesignController;
+//use \App\Http\Controllers\DesignController;
 
 Route::get('/', function () {
     return view('pages.main');
@@ -30,10 +30,10 @@ Route::prefix('collections')->group(function () {
     Route::get('/{id?}', [CollectionController::class, 'getCollection'])->name('collection.get');;
 });
 
-Route::prefix('designs')->group(function () {
-    Route::get('/', [DesignController::class, 'getPage'])->name('design.page-get');
-    Route::post('/store', [DesignController::class, 'storeDesign'])->name('designs.store');
-});
+//Route::prefix('designs')->group(function () {
+//    Route::get('/', [DesignController::class, 'getPage'])->name('design.page-get');
+//    Route::post('/store', [DesignController::class, 'storeDesign'])->name('designs.store');
+//});
 
 Route::prefix('authorization')->group(function () {
     Route::get('/sms/get', [AuthorizationController::class, 'getSmsCode'])->name('authorization.get-sms');
