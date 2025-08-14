@@ -4,38 +4,17 @@ namespace App\Services\Kafka;
 
 use Junges\Kafka\Facades\Kafka;
 use Junges\Kafka\Message\Message;
-use Junges\Kafka\Contracts\KafkaProducerMessage;
 
-class KafkaProducer 
+class DesignsKafkaProducer
 {
     /**
-     * Отправка события создания заказа
-     */
-    public function sendOrderCreated(array $data): void
-    {
-        $message = new Message(
-            'orders',
-            json_encode([
-                'order_id' => $data['id'],
-                'amount' => $data['id'],
-                'user_id' => $data['user_id'] ?? null,
-                'created_at' => now()->toISOString(),
-                'event_type' => 'order.created'
-            ]),
-            $data['id'] ?? null
-        );
-
-        Kafka::publish($message);
-    }
-
-    /**
-     * Отправка события создания дизайна (от designs сервиса)
+     * Отправка события создания дизайна
      */
     public function sendDesignCreated(array $data): void
     {
         $message = new Message(
             'designs',
-            json_encode([
+            [
                 'design_id' => $data['id'],
                 'user_id' => $data['user_id'],
                 'title' => $data['title'],
@@ -44,7 +23,7 @@ class KafkaProducer
                 'created_at' => now()->toISOString(),
                 'event_type' => 'design.created',
                 'source_service' => 'designs'
-            ]),
+            ],
             $data['id'] ?? null
         );
 
@@ -58,7 +37,7 @@ class KafkaProducer
     {
         $message = new Message(
             'designs',
-            json_encode([
+            [
                 'design_id' => $data['id'],
                 'user_id' => $data['user_id'],
                 'title' => $data['title'] ?? null,
@@ -67,7 +46,7 @@ class KafkaProducer
                 'updated_at' => now()->toISOString(),
                 'event_type' => 'design.updated',
                 'source_service' => 'designs'
-            ]),
+            ],
             $data['id'] ?? null
         );
 
@@ -81,13 +60,13 @@ class KafkaProducer
     {
         $message = new Message(
             'designs',
-            json_encode([
+            [
                 'design_id' => $data['id'],
                 'user_id' => $data['user_id'],
                 'deleted_at' => now()->toISOString(),
                 'event_type' => 'design.deleted',
                 'source_service' => 'designs'
-            ]),
+            ],
             $data['id'] ?? null
         );
 
@@ -101,7 +80,7 @@ class KafkaProducer
     {
         $message = new Message(
             'designs',
-            json_encode([
+            [
                 'design_id' => $data['id'],
                 'user_id' => $data['user_id'],
                 'old_status' => $data['old_status'],
@@ -110,7 +89,7 @@ class KafkaProducer
                 'event_type' => 'design.status_changed',
                 'source_service' => 'designs',
                 'reason' => $data['reason'] ?? null
-            ]),
+            ],
             $data['id'] ?? null
         );
 
@@ -124,14 +103,13 @@ class KafkaProducer
     {
         $message = new Message(
             $topic,
-            json_encode(array_merge($data, [
+            array_merge($data, [
                 'timestamp' => now()->toISOString(),
-                'source_service' => 'main'
-            ])),
+                'source_service' => 'designs'
+            ]),
             $key
         );
 
         Kafka::publish($message);
     }
 }
-
