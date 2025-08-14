@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class GetSmsCodeRequest extends FormRequest
+class VerifySmsCodeRequest extends FormRequest
 {
     public function authorize(): bool
     {
@@ -15,6 +15,7 @@ class GetSmsCodeRequest extends FormRequest
     {
         return [
             'phone' => ['required', 'string', 'regex:/^\+?[1-9]\d{7,14}$/'],
+            'code' => ['required', 'string', 'regex:/^\d{4,6}$/'],
         ];
     }
 
@@ -24,6 +25,9 @@ class GetSmsCodeRequest extends FormRequest
             'phone.required' => 'Номер телефона обязателен.',
             'phone.string' => 'Номер телефона должен быть строкой.',
             'phone.regex' => 'Некорректный формат номера телефона. Используйте формат E.164, например +79991234567.',
+            'code.required' => 'Код подтверждения обязателен.',
+            'code.string' => 'Код подтверждения должен быть строкой.',
+            'code.regex' => 'Код подтверждения должен содержать от 4 до 6 цифр.',
         ];
     }
 

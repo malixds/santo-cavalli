@@ -4,6 +4,7 @@ use App\Http\Controllers\AuthorizationController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\WishlistController;
+use App\Http\Controllers\SmsController;
 use Illuminate\Support\Facades\Route;
 use \App\Http\Controllers\MainController;
 use \App\Http\Controllers\CategoryController;
@@ -36,9 +37,12 @@ Route::prefix('collections')->group(function () {
 //});
 
 Route::prefix('authorization')->group(function () {
-    Route::get('/sms/get', [AuthorizationController::class, 'getSmsCode'])->name('authorization.get-sms');
-    Route::post('/code/send', [AuthorizationController::class, 'sendCode'])->name('authorization.send-code');
+        Route::post('/send-code', [SmsController::class, 'sendCode'])->name('authorization.send-code');
+        Route::post('/verify-code', [SmsController::class, 'verifyCode'])->name('authorization.verify-code');
+        Route::get('/balance', [SmsController::class, 'getBalance'])->name('authorization.sms-balance');
+        Route::get('/status/{sms_id}', [SmsController::class, 'getSmsStatus'])->name('authorization.sms-status');    
 });
+
 
 Route::prefix('cart')->group(function () {
     Route::post('/add', [CartController::class, 'addItem'])->name('cart.add');
