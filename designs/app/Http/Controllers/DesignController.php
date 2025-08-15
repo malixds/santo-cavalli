@@ -6,7 +6,7 @@ use App\Services\Kafka\DesignsKafkaProducer;
 use Illuminate\Http\Request;
 use Illuminate\Http\JsonResponse;
 
-class DesignController extends Controller
+class DesignApiController extends Controller
 {
     public function __construct(
         private DesignsKafkaProducer $kafkaProducer

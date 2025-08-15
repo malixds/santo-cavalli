@@ -34,4 +34,8 @@ return [
             'channel' => env('SLACK_BOT_USER_DEFAULT_CHANNEL'),
         ],
     ],
+
+    'design' => [
+        'url' => env('DESIGN_SERVICE_URL', 'http://localhost:8001'),
+    ],
 ];

@@ -35,11 +35,11 @@
                                 </button>
                             </div>
 
-                            <form id="auth-form" class="mt-6 space-y-6" action="{{ route('authorization') }}"
+                            <form id="auth-form" class="mt-6 space-y-6" action="{{ route('authorization.send-code') }}"
                                   method="POST">
                                 @csrf
                                 <div>
-                                    <label for="email" class="block text-sm font-medium text-gray-700">Телефон</label>
+                                    <label for="phone" class="block text-sm font-medium text-gray-700">Телефон</label>
                                     <input id="phone" name="phone" required
                                            class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-gray-900 focus:border-gray-900 sm:text-sm">
                                 </div>
@@ -54,11 +54,10 @@
                                 </div>
 
                                 <div>
-                                    <a type="submit"
-                                       href="{{route('')}}"
+                                    <button type="submit"
                                        class="w-full flex justify-center py-2 px-4 border border-black">
                                         Получить смс
-                                    </a>
+                                    </button>
                                 </div>
                             </form>
                         </div>

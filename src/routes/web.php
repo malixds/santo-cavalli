@@ -46,8 +46,8 @@ Route::prefix('authorization')->group(function () {
 
 Route::prefix('cart')->group(function () {
     Route::post('/add', [CartController::class, 'addItem'])->name('cart.add');
-    Route::put('/add', [CartController::class, 'updateItem'])->name('cart.add');
-    Route::delete('/add', [CartController::class, 'removeItem'])->name('cart.add');
+    Route::put('/edit', [CartController::class, 'updateItem'])->name('cart.edit');
+    Route::delete('/clear', [CartController::class, 'removeItem'])->name('cart.clear');
     Route::get('/get', [CartController::class, 'getCart'])->name('cart.get');
 });
 

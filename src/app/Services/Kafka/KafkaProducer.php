@@ -5,6 +5,7 @@ namespace App\Services\Kafka;
 use Junges\Kafka\Facades\Kafka;
 use Junges\Kafka\Message\Message;
 use App\DTOs\Kafka\OrderEventDTO;
+
 use App\DTOs\Kafka\DesignEventDTO;
 use App\DTOs\Kafka\NotificationEventDTO;
 
@@ -15,6 +16,7 @@ class KafkaProducer
      */
     public function sendOrderCreated(array $data): void
     {
+
         $dto = OrderEventDTO::createOrderCreated(
             orderId: $data['id'],
             amount: $data['amount'],
@@ -23,8 +25,8 @@ class KafkaProducer
 
         $message = new Message(
             'orders',
-            $dto->toArray(),
-            $dto->orderId
+            $dto->orderId,
+            $dto->toArray()
         );
 
         Kafka::publish($message);
@@ -45,8 +47,8 @@ class KafkaProducer
 
         $message = new Message(
             'designs',
-            $dto->toArray(),
-            $dto->designId
+            $dto->designId,
+            $dto->toArray()
         );
 
         Kafka::publish($message);
@@ -67,8 +69,8 @@ class KafkaProducer
 
         $message = new Message(
             'designs',
-            $dto->toArray(),
-            $dto->designId
+            $dto->designId,
+            $dto->toArray()
         );
 
         Kafka::publish($message);
@@ -86,8 +88,8 @@ class KafkaProducer
 
         $message = new Message(
             'designs',
-            $dto->toArray(),
-            $dto->designId
+            $dto->designId,
+            $dto->toArray()
         );
 
         Kafka::publish($message);
@@ -108,8 +110,8 @@ class KafkaProducer
 
         $message = new Message(
             'designs',
-            $dto->toArray(),
-            $dto->designId
+            $dto->designId,
+            $dto->toArray()
         );
 
         Kafka::publish($message);
@@ -129,8 +131,8 @@ class KafkaProducer
 
         $message = new Message(
             $topic,
+            $key,
             $dto->toArray(),
-            $key
         );
 
         Kafka::publish($message);

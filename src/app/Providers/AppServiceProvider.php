@@ -6,6 +6,7 @@ use App\Interfaces\CartInterfaces\ICartRepository;
 use App\Interfaces\CollectionInterfaces\ICollectionRepository;
 use App\Repository\CartRepositories\CartRepository;
 use App\Repository\CollectionRepositories\CollectionRepository;
+use App\Services\DesignService;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -17,6 +18,10 @@ class AppServiceProvider extends ServiceProvider
     {
         $this->app->bind(ICollectionRepository::class, CollectionRepository::class);
         $this->app->bind(ICartRepository::class, CartRepository::class);
+        
+        $this->app->singleton(DesignService::class, function ($app) {
+            return new DesignService(config('services.design.url'));
+        });
     }
 
     /**
