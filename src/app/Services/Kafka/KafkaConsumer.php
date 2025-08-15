@@ -6,6 +6,9 @@ use Junges\Kafka\Facades\Kafka;
 use Junges\Kafka\Contracts\KafkaConsumerMessage;
 use Illuminate\Support\Facades\Log;
 use App\Services\Logging\ClickHouseLogger;
+use App\DTOs\Kafka\OrderEventDTO;
+use App\DTOs\Kafka\DesignEventDTO;
+use App\DTOs\Kafka\NotificationEventDTO;
 
 class KafkaConsumer
 {

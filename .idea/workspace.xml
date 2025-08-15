@@ -5,21 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e3e68ba7-f66d-4783-9d90-416e93fcf08d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/app/Services/Authorization/AuthorizationService.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/Services/Kafka/KafkaProducer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/phpspec.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/phpspec.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/phpunit.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/phpunit.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/designs/app/Providers/AppServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/designs/app/Providers/AppServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dockerfiles/php.dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/dockerfiles/php.dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/Http/Controllers/AuthorizationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Http/Controllers/AuthorizationController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/Http/Requests/GetSmsCodeRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Http/Requests/GetSmsCodeRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/Services/SmsCodeService.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Services/SmsCodeService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/src/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config/services.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/services.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clickhouse/init/01-create-tables.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/Http/Controllers/DesignController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Http/Controllers/DesignController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/Services/Kafka/KafkaConsumer.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Services/Kafka/KafkaConsumer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/Services/Kafka/KafkaProducer.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Services/Kafka/KafkaProducer.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -474,7 +464,7 @@
       <workItem from="1751969079731" duration="51465000" />
       <workItem from="1754288838236" duration="1919000" />
       <workItem from="1754893481510" duration="14832000" />
-      <workItem from="1755165727679" duration="1037000" />
+      <workItem from="1755165727679" duration="1850000" />
     </task>
     <servers />
   </component>
